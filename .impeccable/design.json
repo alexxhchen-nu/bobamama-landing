@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-24T19:01:54Z",
+  "title": "Design System: Bobamama",
+  "extensions": {
+    "colorMeta": {
+      "bark": { "role": "primary", "displayName": "Counter Bark", "canonical": "#7A5649" },
+      "bark-deep": { "role": "primary", "displayName": "Deep Bark", "canonical": "#5B3F34" },
+      "cta": { "role": "primary", "displayName": "Pearl Lemon CTA", "canonical": "#FFEF6E" },
+      "leaf": { "role": "secondary", "displayName": "Stall Leaf", "canonical": "#739D5B" },
+      "leaf-light": { "role": "secondary", "displayName": "Leaf Light", "canonical": "#B1D07F" },
+      "leaf-pale": { "role": "secondary", "displayName": "Leaf Pale", "canonical": "#EAF2D9" },
+      "wood": { "role": "secondary", "displayName": "Wood Tray", "canonical": "#B98962" },
+      "wood-light": { "role": "secondary", "displayName": "Wood Light", "canonical": "#D2A77C" },
+      "milk": { "role": "neutral", "displayName": "Milk", "canonical": "#FFF8F0" },
+      "foam": { "role": "neutral", "displayName": "Foam", "canonical": "#FFFCF7" },
+      "chalk": { "role": "neutral", "displayName": "Chalk", "canonical": "#FFF9EC" },
+      "blush": { "role": "tertiary", "displayName": "Blush", "canonical": "#F5A3A0" }
+    },
+    "typographyMeta": {
+      "brand-mark": { "displayName": "Brand Mark", "purpose": "Hero Bobamama wordmark only." },
+      "display": { "displayName": "Display", "purpose": "Hero headline." },
+      "headline": { "displayName": "Headline", "purpose": "Section H2 titles." },
+      "title": { "displayName": "Title", "purpose": "H3 / cast names / step titles." },
+      "body": { "displayName": "Body", "purpose": "Marketing and UI paragraphs." },
+      "label": { "displayName": "Label", "purpose": "HUD, chips, compact controls." }
+    },
+    "shadows": [
+      {
+        "name": "pressable",
+        "value": "0 5px 0 #7A5649, inset 0 3px 0 rgba(255,255,255,.55)",
+        "purpose": "Primary button rest state."
+      },
+      {
+        "name": "tray",
+        "value": "0 10px 0 rgba(91,63,52,.22)",
+        "purpose": "Shop art and tone-drill board."
+      },
+      {
+        "name": "bubble",
+        "value": "0 6px 0 rgba(91,63,52,.15)",
+        "purpose": "Dialogue bubble."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Hero rise, bubble swap, HUD pop."
+      },
+      {
+        "name": "ken",
+        "value": "18s ease ken-burns on hero background",
+        "purpose": "Slow hero image settle; disabled under reduced motion."
+      },
+      {
+        "name": "draw",
+        "value": "0.9s ease-out stroke draw",
+        "purpose": "Tone-path reveal on chip select."
+      }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "720px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Lemon pill CTA with bark border and pressable offset shadow.",
+      "html": "<button class=\"ds-btn-primary\">Get early access</button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;font:700 18px/1 'Balsamiq Sans',sans-serif;color:#5B3F34;background:#FFEF6E;border:3.5px solid #7A5649;border-radius:999px;padding:14px 22px;box-shadow:0 5px 0 #7A5649,inset 0 3px 0 rgba(255,255,255,.55);cursor:pointer}.ds-btn-primary:hover{transform:translateY(-1px);box-shadow:0 6px 0 #7A5649,inset 0 3px 0 rgba(255,255,255,.55)}.ds-btn-primary:active{transform:translateY(4px);box-shadow:0 1px 0 #7A5649,inset 0 3px 0 rgba(255,255,255,.55)}"
+    },
+    {
+      "name": "Tone Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Pitch-pattern choice; lemon when selected.",
+      "html": "<button class=\"ds-chip\" aria-pressed=\"true\">Falling</button>",
+      "css": ".ds-chip{font:700 16px/1 'Balsamiq Sans',sans-serif;border:3px solid #7A5649;background:#FFF9EC;border-radius:999px;padding:12px 16px;color:#5B3F34;box-shadow:0 4px 0 rgba(91,63,52,.2)}.ds-chip[aria-pressed=\"true\"]{background:#FFEF6E}"
+    },
+    {
+      "name": "Dialogue Bubble",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Shop chat bubble under cast art.",
+      "html": "<div class=\"ds-bubble\"><strong>Bobamama</strong><p>Come sit. Order a drink.</p></div>",
+      "css": ".ds-bubble{background:#FFFCF7;border:3px solid #7A5649;border-radius:22px;padding:16px 18px;max-width:52ch;box-shadow:0 6px 0 rgba(91,63,52,.15);font-family:'Balsamiq Sans',sans-serif;color:#5B3F34}.ds-bubble strong{font-family:'Fuzzy Bubbles','Balsamiq Sans',sans-serif;display:block;margin-bottom:4px}"
+    },
+    {
+      "name": "Email Input",
+      "kind": "input",
+      "refersTo": "input-email",
+      "description": "Waitlist email field.",
+      "html": "<input class=\"ds-input\" type=\"email\" placeholder=\"you@example.com\">",
+      "css": ".ds-input{min-height:52px;width:100%;border:3.5px solid #7A5649;border-radius:999px;padding:0 18px;font:700 16px/1 'Balsamiq Sans',sans-serif;background:#FFFCF7;color:#5B3F34}.ds-input::placeholder{color:#8a6a5a}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Grandma's Pearl Stall",
+    "overview": "Bobamama looks like a cozy pearl milk tea shop you can walk into—warm wood, milk foam, leaf greens, and idle-game playfulness. Illustration carries the brand; UI is chunky and tactile. Rejects coupon-board redeem metaphors and purple AI defaults. Heroes lead with Bobamama at brand scale over full-bleed shop art.",
+    "keyCharacteristics": [
+      "Full-bleed illustrated shop hero",
+      "Warm wood + milk neutrals with leaf accents",
+      "Chunky bark-bordered pills with offset shadows",
+      "Fuzzy Bubbles display + Balsamiq Sans body",
+      "Soft progression tease without invented economy UI"
+    ],
+    "rules": [
+      {
+        "name": "The Rarity Accent Rule",
+        "body": "Lemon CTA and blush stay sparse; most of the screen is milk, wood, and leaf.",
+        "section": "colors"
+      },
+      {
+        "name": "The No-Eyebrow Rule",
+        "body": "Do not add kicker labels above headings.",
+        "section": "typography"
+      },
+      {
+        "name": "The Pressable Rule",
+        "body": "Primary interactive controls use offset shadows that compress on :active.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do lead heroes with Bobamama brand-mark scale, one headline, one CTA group, full-bleed shop art.",
+      "Do keep lemon CTA rare against bark/milk.",
+      "Do tease progression with open/locked cast—not invent economy UI.",
+      "Do honor prefers-reduced-motion."
+    ],
+    "donts": [
+      "Don't center a coupon/redeem wooden-board form as the product metaphor.",
+      "Don't use purple AI gradients, glass stacks, or dashboard card grids as page structure.",
+      "Don't put pricing, MOE/dictionary headlines, or search-volume claims on the landing.",
+      "Don't treat temporary concept art as final brand assets."
+    ]
+  }
+}
