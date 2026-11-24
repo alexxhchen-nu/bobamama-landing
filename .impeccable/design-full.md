@@ -7,9 +7,11 @@ colors:
   chalk: "#FFF9EC"
   bark: "#7A5649"
   bark-deep: "#5B3F34"
+  ink: "#3D2A22"
   wood: "#B98962"
   wood-light: "#D2A77C"
   leaf: "#739D5B"
+  leaf-ink: "#4C673C"
   leaf-light: "#B1D07F"
   leaf-pale: "#EAF2D9"
   cta: "#FFEF6E"
@@ -128,10 +130,12 @@ A milk-tea counter palette: bark browns for structure, foam for surfaces, leaf g
 
 ### Primary
 - **Counter Bark** (`#7A5649` / `#5B3F34`): navigation bar, borders, primary text, button outlines
+- **Ink** (`#3D2A22`): darkest readable text on wood trays and other mid-tone fills
 - **Pearl Lemon CTA** (`#FFEF6E`): primary actions and hero brand mark highlight
 
 ### Secondary
 - **Stall Leaf** (`#739D5B` / `#B1D07F` / `#EAF2D9`): accents, success verdict, soft section washes
+- **Leaf Ink** (`#4C673C`): leaf-colored labels on foam/milk (AA body contrast)
 - **Wood Tray** (`#B98962` / `#D2A77C`): tone-drill board fill
 
 ### Neutral

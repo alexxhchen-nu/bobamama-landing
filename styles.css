@@ -12,9 +12,11 @@
   --foam:#FFFCF7;
   --bark:#7A5649;
   --bark-deep:#5B3F34;
+  --ink:#3D2A22;
   --wood:#B98962;
   --wood-lt:#D2A77C;
   --leaf:#739D5B;
+  --leaf-ink:#4C673C;
   --leaf-lt:#B1D07F;
   --leaf-pale:#EAF2D9;
   --cta:#FFEF6E;
@@ -71,8 +73,8 @@ img{max-width:100%;display:block}
 .btn-sm{font-size:15px;padding:8px 16px;box-shadow:0 4px 0 #5f4136,inset 0 2px 0 rgba(255,255,255,.55)}
 .btn-ghost{background:var(--chalk);color:var(--bark)}
 
-/* hero — full bleed shop */
-.hero{position:relative;min-height:min(92vh,920px);display:grid;align-items:end;color:var(--chalk);overflow:hidden}
+/* hero — full bleed shop (solid base so contrast tooling sees dark ground under chalk/CTA) */
+.hero{position:relative;min-height:min(92vh,920px);display:grid;align-items:end;color:var(--chalk);background:#2d1e18;overflow:hidden}
 .hero-bg{
   position:absolute;inset:0;
   background:
@@ -127,7 +129,7 @@ img{max-width:100%;display:block}
 .cast-btn:focus-visible{outline-offset:2px}
 .cast-btn.locked{opacity:.55;cursor:not-allowed;background:#efe6da}
 .cast-name{font-family:var(--display);font-weight:700;font-size:1.05rem}
-.cast-state{font-size:.8rem;font-weight:700;color:var(--leaf)}
+.cast-state{font-size:.8rem;font-weight:700;color:var(--leaf-ink)}
 .cast-btn.locked .cast-state{color:#8a6a5a}
 .bubble{
   margin-top:16px;background:var(--foam);border:3px solid var(--bark);
@@ -153,11 +155,11 @@ img{max-width:100%;display:block}
   box-shadow:0 10px 0 rgba(91,63,52,.22);
   margin-bottom:22px;
 }
-.drill-top{text-align:center;margin-bottom:12px}
-.ask{font-weight:700;color:var(--bark)}
-.han{font-size:2.4rem;font-weight:700;line-height:1.2;margin:4px 0}
-.roman{font-weight:700}
-.hint{text-align:center;font-weight:700;margin:8px 0 12px}
+.drill-top{text-align:center;margin-bottom:12px;color:var(--ink)}
+.ask{font-weight:700;color:var(--ink)}
+.han{font-size:2.4rem;font-weight:700;line-height:1.2;margin:4px 0;color:var(--ink)}
+.roman{font-weight:700;color:var(--ink)}
+.hint{text-align:center;font-weight:700;margin:8px 0 12px;color:var(--ink)}
 .tries{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:8px}
 .chip{
   font:700 16px/1 var(--body);border:3px solid var(--bark);background:var(--chalk);
@@ -203,7 +205,7 @@ img{max-width:100%;display:block}
 
 .foot{background:var(--bark);color:var(--chalk);padding:36px 24px 48px}
 .foot-in{max-width:960px;margin:0 auto}
-.foot .tiny{opacity:.75;margin-top:8px}
+.foot .tiny{color:#F0E6DB;opacity:1;margin-top:8px}
 .foot p+p{margin-top:6px}
 
 @media (max-width:720px){
