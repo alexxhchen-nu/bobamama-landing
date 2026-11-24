@@ -1,28 +1,28 @@
-# Cats & Soup — Coupon Redeem (static clone)
+# Bobamama — Landing Page
 
-Static visual clone of [redeem.catsnsoup.com](https://redeem.catsnsoup.com): cozy meadow coupon board, multilingual copy, and client-side form UI.
+Static landing for the Taiwanese Hokkien learning app. World: grandma's pearl milk tea shop. No build step.
 
 ## Local preview
 
 ```bash
 python3 -m http.server 8000
-# open http://localhost:8000
+# http://localhost:8000
 ```
 
-Or with Caddy (`Caddyfile` serves on `:8080`):
+## Design notes
 
-```bash
-caddy run
-```
+- Spec: `docs/superpowers/specs/2026-11-24-bobamama-boba-shop-landing-design.md`
+- Craft reference extract: `docs/DESIGN-catsnsoup-extract.md`
+- Shop hero / cast art in `assets/` are temporary concept images
 
-## What’s included
+## Placeholders
 
-- Original skin / logo / button / popup artwork under `assets/`
-- Social icons, favicon, OG banner, Neowiz footer mark
-- English / Korean / Japanese / Traditional Chinese / Simplified Chinese strings in `assets/i18n.json`
-- Language switcher, validation alerts, and loading button state
+| Item | Notes |
+|---|---|
+| Waitlist form | Prototype only — does not store email |
+| Shop illustrations | Concept art; replace with final assets |
+| Game systems | Check-ins / points / cards intentionally undefined |
 
-## Notes
+## Copy rules
 
-- Coupon submit is **demo-only** — it validates empty fields and shows the alert popup. It does **not** call the live redeem API.
-- Layout CSS is rem-scaled (`html` font-size) to match the source’s desktop and ≤750px behavior.
+From the positioning brief: tone correction + heritage speakers + learning loop. No dictionary/MOE as headline differentiators. English-first. No pricing.

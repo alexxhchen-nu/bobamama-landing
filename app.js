@@ -1,172 +1,146 @@
-(() => {
-  const LANG_LABEL = { en: "ENG", ko: "KR", ja: "JP", tw: "TW", zh: "CN" };
-  const STORAGE_KEY = "cns-redeem-lang";
+(function () {
+  "use strict";
 
-  const els = {
-    html: document.documentElement,
-    langSelected: document.getElementById("langSelected"),
-    langList: document.getElementById("langList"),
-    snsList: document.getElementById("snsList"),
-    logoTitle: document.getElementById("logoTitle"),
-    pageTitle: document.getElementById("pageTitle"),
-    managerId: document.getElementById("managerId"),
-    couponId: document.getElementById("couponId"),
-    findUserTitle: document.getElementById("findUserTitle"),
-    findUserInfo1: document.getElementById("findUserInfo1"),
-    findUserInfo2: document.getElementById("findUserInfo2"),
-    getRewardBtn: document.getElementById("getRewardBtn"),
-    cautionsTitle: document.getElementById("cautionsTitle"),
-    caution1: document.getElementById("caution1"),
-    caution2: document.getElementById("caution2"),
-    caution2Sub: document.getElementById("caution2Sub"),
-    caution3: document.getElementById("caution3"),
-    caution4: document.getElementById("caution4"),
-    caution5: document.getElementById("caution5"),
-    dim: document.getElementById("dim"),
-    popAlert: document.getElementById("popAlert"),
-    popText: document.getElementById("popText"),
-    popConfirm: document.getElementById("popConfirm"),
-    form: document.getElementById("couponForm"),
-  };
-
-  let i18n = null;
-  let lang = "en";
-  let busy = false;
-
-  function setLangOpen(open) {
-    els.langSelected.classList.toggle("opened", open);
-    els.langSelected.setAttribute("aria-expanded", open ? "true" : "false");
-  }
-
-  function showPop(message) {
-    els.popText.textContent = message;
-    els.dim.classList.remove("hide");
-    els.dim.classList.add("show");
-    els.popAlert.classList.remove("hide");
-    els.popAlert.classList.add("show");
-  }
-
-  function hidePop() {
-    els.dim.classList.add("hide");
-    els.dim.classList.remove("show");
-    els.popAlert.classList.add("hide");
-    els.popAlert.classList.remove("show");
-  }
-
-  function applyLang(next) {
-    if (!i18n || !i18n[next]) return;
-    lang = next;
-    const t = i18n[lang];
-    els.html.lang = lang;
-    els.langSelected.textContent = LANG_LABEL[lang] || lang.toUpperCase();
-    localStorage.setItem(STORAGE_KEY, lang);
-
-    els.logoTitle.setAttribute("aria-label", t.logoTxt);
-    els.pageTitle.setAttribute("aria-label", t.titleTxt);
-    els.managerId.placeholder = t.inputTxt1;
-    els.couponId.placeholder = t.inputTxt2;
-    els.getRewardBtn.setAttribute("aria-label", t.btnTxt);
-    els.findUserTitle.textContent = t.userNumber;
-    els.findUserInfo1.textContent = t.userNumberInfo1;
-    els.findUserInfo2.textContent = t.userNumberInfo2;
-    els.cautionsTitle.textContent = t.detailTitle;
-    els.caution1.textContent = t.detailTxt1;
-    els.caution2.replaceChildren(
-      document.createTextNode(t.detailTxt2),
-      Object.assign(document.createElement("span"), {
-        id: "caution2Sub",
-        textContent: t.detailTxt2Sub,
-      })
+  function still() {
+    return !!(
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
     );
-    els.caution2Sub = document.getElementById("caution2Sub");
-    els.caution3.textContent = t.detailTxt3;
-    els.caution4.textContent = t.detailTxt4;
-    els.caution5.textContent = t.detailTxt5;
-    els.popConfirm.setAttribute("aria-label", t.btnConfirm);
-
-    const icons = t.snsIcons || [];
-    const hrefs = t.snsHrefs || [];
-    const links = els.snsList.querySelectorAll("a");
-    links.forEach((a, i) => {
-      if (hrefs[i]) a.href = hrefs[i];
-      const img = a.querySelector("img");
-      if (img && icons[i]) img.src = icons[i];
-    });
-
-    setLangOpen(false);
   }
 
-  function validateAndSubmit(event) {
-    event.preventDefault();
-    if (busy || !i18n) return;
-    const t = i18n[lang];
-    const userId = els.managerId.value.trim();
-    const code = els.couponId.value.trim().replace(/-/g, "");
+  var pearls = 0;
+  var pearlEl = document.getElementById("pearls");
+  var hud = document.querySelector(".hud");
 
-    if (!userId) {
-      showPop(t.popTxt1);
-      return;
+  function addPearls(n) {
+    pearls += n;
+    pearlEl.textContent = String(pearls);
+    hud.classList.remove("pop");
+    if (!still()) {
+      void hud.offsetWidth;
+      hud.classList.add("pop");
     }
-    if (!code) {
-      showPop(t.popTxt2);
-      return;
-    }
-
-    // Demo-only: do not call the live redeem API.
-    busy = true;
-    els.getRewardBtn.classList.add("off");
-    window.setTimeout(() => {
-      els.getRewardBtn.classList.remove("off");
-      busy = false;
-      showPop(t.popTxt9);
-    }, 600);
   }
 
-  async function init() {
-    const res = await fetch("./assets/i18n.json");
-    i18n = await res.json();
-    const saved = localStorage.getItem(STORAGE_KEY);
-    applyLang(saved && i18n[saved] ? saved : "en");
+  var lines = {
+    grandma: [
+      "Come sit. Order a drink. We'll fix your tones between customers.",
+      "You understand every word. Now answer me — rising or falling?",
+      "Five minutes a day in the shop beats a year of silent understanding.",
+    ],
+    learner: [
+      "I grew up hearing Taiwanese. Speaking still feels scary.",
+      "Yesterday I unlocked Auntie's snack chat. Still locked for you!",
+      "Tone 2 is my nemesis. Grandma keeps making me sigh it out.",
+    ],
+    auntie: ["Come back after a few chapters — Auntie Lin's lane isn't open yet."],
+    driver: ["Uncle Chen drives the delivery scooter. His stories unlock later."],
+  };
+  var names = {
+    grandma: "Bobamama",
+    learner: "A-Ming",
+    auntie: "Auntie Lin",
+    driver: "Uncle Chen",
+  };
+  var idx = {};
+  var who = document.getElementById("who");
+  var say = document.getElementById("say");
+  var bubble = document.getElementById("bubble");
 
-    els.langSelected.addEventListener("click", (e) => {
-      e.preventDefault();
-      setLangOpen(!els.langSelected.classList.contains("opened"));
-    });
-    els.langSelected.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        setLangOpen(!els.langSelected.classList.contains("opened"));
+  function speak(key) {
+    var list = lines[key] || [];
+    var i = idx[key] || 0;
+    idx[key] = (i + 1) % list.length;
+    who.textContent = names[key] || key;
+    say.textContent = list[i] || "";
+    bubble.classList.remove("swap");
+    if (!still()) {
+      void bubble.offsetWidth;
+      bubble.classList.add("swap");
+    }
+  }
+
+  document.querySelectorAll(".cast-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var key = btn.getAttribute("data-who");
+      var open = btn.getAttribute("data-open") === "true";
+      if (!open) {
+        speak(key);
+        return;
       }
+      speak(key);
+      addPearls(1);
     });
+  });
 
-    els.langList.querySelectorAll("a[data-lang]").forEach((a) => {
-      a.addEventListener("click", (e) => {
-        e.preventDefault();
-        applyLang(a.dataset.lang);
+  var paths = {
+    flat: "M70,46 C130,44 220,48 300,50",
+    rise: "M70,134 C140,132 220,92 300,62",
+    fall: "M70,50 C150,56 220,128 300,154",
+  };
+  var res = {
+    flat: [
+      "Close, but your voice stayed up.",
+      'Tone 1 stays high and flat. "má" starts high and then slides down. Let it fall.',
+      "bad",
+    ],
+    rise: [
+      "Tone 5 → try falling.",
+      'Your voice went up, like a question. "má" starts high and slides down, like a sigh.',
+      "bad",
+    ],
+    fall: [
+      "Perfect fall. That's tone 2!",
+      "That's how you say grandma. +3 pearls for you.",
+      "good",
+    ],
+  };
+  var tp = document.getElementById("try-path");
+  var verdict = document.getElementById("verdict");
+  var chips = document.querySelectorAll(".chip");
+
+  chips.forEach(function (c) {
+    c.addEventListener("click", function () {
+      var k = c.getAttribute("data-try");
+      chips.forEach(function (x) {
+        x.setAttribute("aria-pressed", x === c ? "true" : "false");
       });
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!e.target.closest(".lang-box")) setLangOpen(false);
-    });
-
-    els.form.addEventListener("submit", validateAndSubmit);
-    els.popConfirm.addEventListener("click", (e) => {
-      e.preventDefault();
-      hidePop();
-    });
-    els.popConfirm.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        hidePop();
+      tp.setAttribute("d", paths[k]);
+      tp.style.opacity = "1";
+      tp.style.strokeDasharray = "1";
+      tp.style.strokeDashoffset = "0";
+      tp.style.animation = "none";
+      if (!still()) {
+        void tp.getBoundingClientRect();
+        tp.style.animation = "draw .9s ease-out both";
       }
+      document.getElementById("v-title").textContent = res[k][0];
+      document.getElementById("v-body").textContent = res[k][1];
+      verdict.setAttribute("data-state", res[k][2]);
+      verdict.classList.remove("anim");
+      if (!still()) {
+        void verdict.offsetWidth;
+        verdict.classList.add("anim");
+      }
+      if (k === "fall") addPearls(3);
     });
-    els.dim.addEventListener("click", (e) => {
-      if (e.target === els.dim) hidePop();
-    });
-  }
+  });
 
-  init().catch((err) => {
-    console.error("Failed to load redeem clone", err);
+  var form = document.getElementById("signup");
+  var thanks = document.getElementById("thanks");
+  var email = document.getElementById("email");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!email.value || !email.checkValidity()) {
+      thanks.hidden = true;
+      email.focus();
+      if (email.reportValidity) email.reportValidity();
+      return;
+    }
+    thanks.hidden = false;
+    document.getElementById("thanks-msg").textContent =
+      "Saved you a seat at the stall! (Prototype: nothing was sent.)";
+    addPearls(5);
   });
 })();

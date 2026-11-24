@@ -1,117 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport"
-    content="width=device-width,initial-scale=0.1,minimum-scale=1,maximum-scale=1, user-scalable=1, viewport-fit=cover" />
-  <title>Cats &amp; Soup: Relaxing Cozy Games</title>
-  <meta name="description" content="Collect baby kitties! Cook, relax &amp; grow in this cozy idle game. Claim rewards!" />
-  <meta name="keywords"
-    content="cat,catgames,animal,restaurant,cafe,tycoon,relax,chill,kawaii,sanrio,pompompurin,pochaco,island,idle" />
-  <meta name="robots" content="index,nofollow" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon.jpg" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Cats &amp; Soup: Relaxing Cozy Games" />
-  <meta property="og:description" content="Collect baby kitties! Cook, relax &amp; grow in this cozy idle game. Claim rewards!" />
-  <meta property="og:url" content="https://redeem.catsnsoup.com/" />
-  <meta property="og:image" content="./snsBanner.jpg" />
-  <meta property="og:image:width" content="740" />
-  <meta property="og:image:height" content="340" />
-  <meta name="twitter:card" content="cats & soup" />
-  <meta name="twitter:title" content="Cats &amp; Soup: Relaxing Cozy Games" />
-  <meta name="twitter:description" content="Collect baby kitties! Cook, relax &amp; grow in this cozy idle game. Claim rewards!" />
-  <meta name="twitter:image" content="./snsBanner.jpg" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bobamama — Learn Taiwanese in grandma's boba shop</title>
+<meta name="description" content="Bobamama is a Taiwanese Hokkien learning app set in a pearl milk tea shop. Unlock characters, follow story chapters, and get your tones corrected. Built for heritage speakers.">
+<meta property="og:title" content="Bobamama — Learn Taiwanese in grandma's boba shop">
+<meta property="og:description" content="A cozy Taiwanese Hokkien learning world: grandma's boba shop, story chapters, unlockable chats, and real tone correction.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/bobamama-shop-hero.jpg">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="App">
-    <div class="wrap">
-      <section class="skin sk01">
-        <div class="sns-box">
-          <ul id="snsList">
-            <li><a href="https://www.instagram.com/catsnsoup.official/" target="_blank" rel="noopener noreferrer"><img src="./ico-insta.png" alt="Instagram"></a></li>
-            <li><a href="https://www.youtube.com/c/kittypawpaw" target="_blank" rel="noopener noreferrer"><img src="./ico-youtube.png" alt="YouTube"></a></li>
-            <li><a href="https://www.tiktok.com/@catsnsoup.official?lang=ko-KR" target="_blank" rel="noopener noreferrer"><img src="./ico-tiktok.png" alt="TikTok"></a></li>
-          </ul>
-        </div>
-        <div class="lang-box">
-          <a class="selected" id="langSelected" role="button" tabindex="0" aria-haspopup="listbox" aria-expanded="false">ENG</a>
-          <div class="sel_list" id="langList" role="listbox">
-            <ul>
-              <li><a data-lang="ko" data-label="KR" role="option">KR</a></li>
-              <li><a data-lang="en" data-label="ENG" role="option">ENG</a></li>
-              <li><a data-lang="tw" data-label="TW" role="option">TW</a></li>
-              <li><a data-lang="zh" data-label="CN" role="option">CN</a></li>
-              <li><a data-lang="ja" data-label="JP" role="option">JP</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="title">
-          <div class="content">
-            <h1 class="logo" id="logoTitle" aria-label="Cats &amp; Soup"></h1>
-            <h2 class="tit" id="pageTitle" aria-label="Enter the coupon code"></h2>
-          </div>
-        </div>
-        <div class="form-box">
-          <div class="content">
-            <form id="couponForm" novalidate>
-              <fieldset>
-                <div class="form-group">
-                  <input type="text" placeholder="Enter your user ID" id="managerId" name="managerId" autocomplete="off" />
-                </div>
-                <div class="form-group">
-                  <input type="text" placeholder="Enter the code without '-'" id="couponId" name="couponId" autocomplete="off" />
-                  <div class="input-txt">
-                    <h2 class="tit" id="findUserTitle">Find User ID</h2>
-                    <p class="txt-b" id="findUserInfo1">The user ID can be found through Settings &gt; Support in the top right corner.</p>
-                    <p id="findUserInfo2">(Tap the copy button on the right of the user ID to copy it.)</p>
-                  </div>
-                </div>
-                <button class="bt btn-get" id="getRewardBtn" type="submit" aria-label="Register">
-                  <span class="loading" aria-hidden="true"></span>
-                </button>
-              </fieldset>
-            </form>
-          </div>
-        </div>
-      </section>
-      <section class="skin sk02">
-        <div class="notice-box" id="noticeBox">
-          <div class="content">
-            <h2 class="tit" id="cautionsTitle">Cautions</h2>
-            <div class="txt">
-              <ul id="cautionsList">
-                <li id="caution1">1. If the user ID is entered incorrectly, the item may not be rewarded or it may be rewarded to a different account.
- In these cases, the coupon cannot be canceled.</li>
-                <li id="caution2">2. Coupon rewards are delivered to your mailbox within the game.
- If you do not see them, exit the game and launch it again.
-<span id="caution2Sub">(The mailbox is unlocked after the jar fairy facility is installed.)</span></li>
-                <li id="caution3">3. Coupons that have been registered cannot be sold or traded, and they must be used within the expiry date.</li>
-                <li id="caution4">4. If you have any questions regarding coupon use,
- send an inquiry through Settings &gt; Support &gt; Send Mail.</li>
-                <li id="caution5">5. You may be subject to limits if you engage in abusing behavior regarding coupon use or loopholes.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      <footer class="footer">
-        <div class="content">
-          <span class="logo-neowiz"><img src="./logo-neowiz.png" alt="neowiz"></span>
-        </div>
-      </footer>
-      <div class="dim hide" id="dim">
-        <div class="pop pop-alert hide" id="popAlert" role="dialog" aria-modal="true" aria-labelledby="popText">
-          <div class="cnt">
-            <p class="txt" id="popText"></p>
-          </div>
-          <div class="btn-box">
-            <a class="bt btn-confirm" id="popConfirm" role="button" tabindex="0" aria-label="Confirm"></a>
-          </div>
-        </div>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="brand" href="#top" aria-label="Bobamama home">
+      <span class="brand-ic" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="28" height="28"><path d="M9,16 L31,16 L28,37 L12,37Z" fill="#FFF9EC" stroke="#FFF9EC" stroke-width="2" stroke-linejoin="round"/><path d="M11,26 L29,26 L28,36 L12,36Z" fill="#D9B38C"/><circle cx="16" cy="32" r="2.4" fill="#5B3F34"/><circle cx="21" cy="33" r="2.4" fill="#5B3F34"/><circle cx="25.5" cy="31.5" r="2.4" fill="#5B3F34"/><path d="M22,16 L27,3" stroke="#F29AA1" stroke-width="3.4" stroke-linecap="round"/></svg>
+      </span>
+      Bobamama
+    </a>
+    <nav class="links" aria-label="Sections">
+      <a href="#shop">The shop</a>
+      <a href="#tones">Tone stall</a>
+      <a href="#heritage">Heritage</a>
+    </nav>
+    <div class="bar-r">
+      <div class="hud" aria-live="polite" title="Tap people in the shop to collect pearls">
+        <span class="pearl" aria-hidden="true"></span>
+        <span class="hud-n" id="pearls">0</span>
+        <span class="hud-l">pearls</span>
       </div>
+      <a class="btn btn-sm" href="#waitlist">Join waitlist</a>
     </div>
   </div>
-  <script src="app.js" defer></script>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="hero-bg" role="img" aria-label="Grandma making pearl milk tea in a cozy Taiwanese boba shop while customers chat"></div>
+    <div class="hero-veil"></div>
+    <div class="hero-in">
+      <p class="brand-mark">Bobamama</p>
+      <h1>Learn Taiwanese in grandma's boba shop</h1>
+      <p class="lede">You understand it at home. Now speak it — with tones people actually understand — one chat, one chapter at a time.</p>
+      <div class="cta-row">
+        <a class="btn" href="#waitlist">Get early access</a>
+        <a class="btn btn-ghost" href="#tones">Try the tone drill</a>
+      </div>
+      <p class="tiny">Free to join. We email you when the shop opens.</p>
+    </div>
+  </section>
+
+  <section class="shop" id="shop">
+    <div class="shop-in">
+      <h2>The shop is your home screen</h2>
+      <p class="sec-lede">Walk into the pearl milk tea stall. Unlock people. Chat in Taiwanese. Open storylines as you go. Progress systems are still simmering — the world comes first.</p>
+
+      <div class="shop-stage">
+        <img class="shop-art" src="assets/bobamama-characters.jpg" alt="Grandma, a learner, and a shop cat at the boba counter" width="1280" height="720">
+        <div class="cast" role="group" aria-label="People you can meet in the shop">
+          <button type="button" class="cast-btn" data-who="grandma" data-open="true">
+            <span class="cast-name">Bobamama</span>
+            <span class="cast-state">Open</span>
+          </button>
+          <button type="button" class="cast-btn" data-who="learner" data-open="true">
+            <span class="cast-name">A-Ming</span>
+            <span class="cast-state">Open</span>
+          </button>
+          <button type="button" class="cast-btn locked" data-who="auntie" data-open="false" aria-disabled="true">
+            <span class="cast-name">Auntie Lin</span>
+            <span class="cast-state">Locked</span>
+          </button>
+          <button type="button" class="cast-btn locked" data-who="driver" data-open="false" aria-disabled="true">
+            <span class="cast-name">Uncle Chen</span>
+            <span class="cast-state">Locked</span>
+          </button>
+        </div>
+        <div class="bubble" id="bubble" role="status" aria-live="polite">
+          <strong id="who">Bobamama</strong>
+          <p id="say">Come sit. Order a drink. We'll fix your tones between customers.</p>
+        </div>
+      </div>
+
+      <ol class="loop">
+        <li>
+          <h3>Enter a story chapter</h3>
+          <p>Each chapter is a scene in the shop — family, food, neighbors — not a dry vocab list.</p>
+        </li>
+        <li>
+          <h3>Speak, get corrected</h3>
+          <p>Bobamama listens. She tells you which tone slipped and how to fix it.</p>
+        </li>
+        <li>
+          <h3>Unlock new chats</h3>
+          <p>Meet new people and open new threads as you return. Check-ins and points later — for now, the conversations matter.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="tones" id="tones">
+    <div class="tones-in">
+      <h2>Grandma fixes your tones</h2>
+      <p class="sec-lede">Tones are the hardest part of Taiwanese Hokkien. Other apps play a recording and hope you hear it. Bobamama tells you which tone went wrong.</p>
+
+      <div class="drill wood" id="drill">
+        <div class="drill-top">
+          <p class="ask">Today's word</p>
+          <p class="han" lang="zh-Hant">阿嬤</p>
+          <p class="roman">má · grandma · tone 2, high falling</p>
+        </div>
+        <p class="hint">Which pitch pattern matches?</p>
+        <div class="tries" role="group" aria-label="Pitch patterns">
+          <button type="button" class="chip" data-try="flat" aria-pressed="false">High &amp; flat</button>
+          <button type="button" class="chip" data-try="rise" aria-pressed="false">Rising</button>
+          <button type="button" class="chip" data-try="fall" aria-pressed="false">Falling</button>
+        </div>
+        <svg class="chart" viewBox="0 0 360 180" aria-hidden="true">
+          <path id="try-path" d="" fill="none" stroke="#5B3F34" stroke-width="6" stroke-linecap="round" opacity="0"></path>
+        </svg>
+        <div class="verdict" id="verdict" data-state="idle">
+          <p class="v-title" id="v-title">Pick one and I'll tell you how you did.</p>
+          <p class="v-body" id="v-body">Tone 2 starts high and slides down, like a sigh.</p>
+        </div>
+      </div>
+
+      <ul class="ticks">
+        <li>Say a word out loud, get instant tone-by-tone feedback</li>
+        <li>Practice tone pairs and sandhi with targeted drills</li>
+        <li>Track which tones you keep missing, then drill them until they stick</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="heritage" id="heritage">
+    <div class="heritage-in">
+      <h2>“I understand it, but I can't speak it”</h2>
+      <p class="sec-lede">If you grew up hearing Taiwanese at home, you don't start from zero. Your ear is trained — we close the gap between hearing and saying.</p>
+      <div class="steps">
+        <div class="step">
+          <h3>Tell us what you already know</h3>
+          <p>A short placement of what you understand. No character quizzes.</p>
+        </div>
+        <div class="step">
+          <h3>Start with home talk</h3>
+          <p>Family, food, the phrases you heard growing up — said back in the shop.</p>
+        </div>
+        <div class="step">
+          <h3>Answer grandma</h3>
+          <p>Unlock chats until you can answer the people who raised you.</p>
+        </div>
+      </div>
+      <blockquote class="quote">
+        <p>“I could follow every word my grandmother said. I just could never answer her. That's who this is for.”</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="join" id="waitlist">
+    <div class="join-in">
+      <h2>Be first in line at the stall</h2>
+      <p class="sec-lede">Join the waitlist. We'll email you when early access opens.</p>
+      <form class="signup" id="signup" novalidate>
+        <label class="signup-l" for="email">Email address</label>
+        <div class="signup-row">
+          <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com">
+          <button class="btn" id="signup-btn" type="submit">Join the waitlist</button>
+        </div>
+        <p class="tiny">No spam. One email when we're ready. Prototype: nothing is stored yet.</p>
+        <div class="thanks" id="thanks" hidden>
+          <p id="thanks-msg"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <p class="brand sm">Bobamama</p>
+    <p>Taiwanese Hokkien learning, set in a boba shop. Currently in early access.</p>
+    <p class="tiny">Design prototype. Shop art is temporary concept art — final illustrations TBD.</p>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
 </body>
 </html>
