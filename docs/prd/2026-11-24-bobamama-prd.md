@@ -109,6 +109,8 @@ Product (later):
 
 ## 11. References in repo
 
+- Product record: `PRODUCT.md`
+- Design system: `DESIGN.md` (+ `.impeccable/design.json`)
 - Landing design: `docs/superpowers/specs/2026-11-24-bobamama-boba-shop-landing-design.md`
 - Visual craft extract: `docs/DESIGN-catsnsoup-extract.md`
 - Live page: static `index.html` / `styles.css` / `app.js`
