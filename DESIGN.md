@@ -7,9 +7,11 @@ colors:
   chalk: "#FFF9EC"
   bark: "#7A5649"
   bark-deep: "#5B3F34"
+  ink: "#3D2A22"
   wood: "#B98962"
   wood-light: "#D2A77C"
   leaf: "#739D5B"
+  leaf-ink: "#4C673C"
   leaf-light: "#B1D07F"
   leaf-pale: "#EAF2D9"
   cta: "#FFEF6E"
@@ -109,7 +111,7 @@ components:
 
 <!-- impeccable:design-map -->
 Name: Bobamama
-Colors: primary: bark #7A5649; secondary: leaf #739D5B; tertiary: blush #F5A3A0; neutral: milk #FFF8F0; primary: bark-deep #5B3F34; primary: cta #FFEF6E; secondary: leaf-light #B1D07F (+5 more in the sidecar)
+Colors: primary: bark #7A5649; secondary: leaf #739D5B; tertiary: blush #F5A3A0; neutral: milk #FFF8F0; primary: bark-deep #5B3F34; primary: ink #3D2A22; primary: cta #FFEF6E; secondary: leaf-ink #4C673C (+5 more in the sidecar)
 Fonts: Fuzzy Bubbles (display, brand-mark, headline, title); Balsamiq Sans (body, label)
 Spacing: xs 8px, sm 12px, md 16px, lg 24px, xl 36px, section-y 72px, container 960px, container-wide 1120px
 Radius: pill 999px, panel 28px, bubble 22px, chip 18px, control 16px

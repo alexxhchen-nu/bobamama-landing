@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-24T20:54:39Z",
+  "generatedAt": "2026-11-24T21:05:00Z",
   "title": "Design System: Bobamama",
   "extensions": {
     "colorMeta": {
@@ -8,94 +8,268 @@
         "role": "primary",
         "displayName": "Counter Bark",
         "canonical": "#7A5649",
-        "tonalRamp": ["#30221C", "#553B32", "#7A5547", "#9F6E5D", "#B58E80", "#CBAFA5", "#E0D0CA", "#F6F1EF"]
+        "tonalRamp": [
+          "#30221C",
+          "#553B32",
+          "#7A5547",
+          "#9F6E5D",
+          "#B58E80",
+          "#CBAFA5",
+          "#E0D0CA",
+          "#F6F1EF"
+        ]
       },
       "bark-deep": {
         "role": "primary",
         "displayName": "Deep Bark",
         "canonical": "#5B3F34",
-        "tonalRamp": ["#31211B", "#573B30", "#7C5445", "#A26E5A", "#B88E7E", "#CCAFA4", "#E1D0C9", "#F6F1EF"]
+        "tonalRamp": [
+          "#31211B",
+          "#573B30",
+          "#7C5445",
+          "#A26E5A",
+          "#B88E7E",
+          "#CCAFA4",
+          "#E1D0C9",
+          "#F6F1EF"
+        ]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Ink",
+        "canonical": "#3D2A22",
+        "tonalRamp": [
+          "#2A1D17",
+          "#3D2A22",
+          "#5B3F34",
+          "#7A5649",
+          "#9F7A6A",
+          "#C4A89C",
+          "#E2D3CC",
+          "#F6F1EF"
+        ]
       },
       "cta": {
         "role": "primary",
         "displayName": "Pearl Lemon CTA",
         "canonical": "#FFEF6E",
-        "tonalRamp": ["#4C4400", "#877800", "#C1AC00", "#FBE000", "#FFE937", "#FFEF71", "#FFF6AB", "#FFFCE5"]
+        "tonalRamp": [
+          "#4C4400",
+          "#877800",
+          "#C1AC00",
+          "#FBE000",
+          "#FFE937",
+          "#FFEF71",
+          "#FFF6AB",
+          "#FFFCE5"
+        ]
       },
       "leaf": {
         "role": "secondary",
         "displayName": "Stall Leaf",
         "canonical": "#739D5B",
-        "tonalRamp": ["#23311C", "#3E5631", "#597C46", "#74A15B", "#93B77F", "#B3CCA4", "#D2E1C9", "#F1F6EF"]
+        "tonalRamp": [
+          "#23311C",
+          "#3E5631",
+          "#597C46",
+          "#74A15B",
+          "#93B77F",
+          "#B3CCA4",
+          "#D2E1C9",
+          "#F1F6EF"
+        ]
+      },
+      "leaf-ink": {
+        "role": "secondary",
+        "displayName": "Leaf Ink",
+        "canonical": "#4C673C",
+        "tonalRamp": [
+          "#24311C",
+          "#354825",
+          "#4C673C",
+          "#639054",
+          "#86AB72",
+          "#A9C698",
+          "#D0E0C6",
+          "#F1F6EF"
+        ]
       },
       "leaf-light": {
         "role": "secondary",
         "displayName": "Leaf Light",
         "canonical": "#B1D07F",
-        "tonalRamp": ["#2B3914", "#4B6423", "#6C8F32", "#8CBB41", "#A6CC6A", "#C0DA95", "#DAE9C1", "#F4F8EC"]
+        "tonalRamp": [
+          "#2B3914",
+          "#4B6423",
+          "#6C8F32",
+          "#8CBB41",
+          "#A6CC6A",
+          "#C0DA95",
+          "#DAE9C1",
+          "#F4F8EC"
+        ]
       },
       "leaf-pale": {
         "role": "secondary",
         "displayName": "Leaf Pale",
         "canonical": "#EAF2D9",
-        "tonalRamp": ["#354319", "#546928", "#728F36", "#91B545", "#A8C668", "#BED48E", "#D4E5B2", "#EAF2D9"]
+        "tonalRamp": [
+          "#354319",
+          "#546928",
+          "#728F36",
+          "#91B545",
+          "#A8C668",
+          "#BED48E",
+          "#D4E5B2",
+          "#EAF2D9"
+        ]
       },
       "wood": {
         "role": "secondary",
         "displayName": "Wood Tray",
         "canonical": "#B98962",
-        "tonalRamp": ["#362517", "#5F4128", "#875D3A", "#B0784B", "#C39773", "#D5B59B", "#E6D3C4", "#F7F2ED"]
+        "tonalRamp": [
+          "#362517",
+          "#5F4128",
+          "#875D3A",
+          "#B0784B",
+          "#C39773",
+          "#D5B59B",
+          "#E6D3C4",
+          "#F7F2ED"
+        ]
       },
       "wood-light": {
         "role": "secondary",
         "displayName": "Wood Light",
         "canonical": "#D2A77C",
-        "tonalRamp": ["#3A2613", "#664321", "#92612F", "#BE7E3D", "#CE9B67", "#DCB894", "#EBD5C0", "#F9F2EC"]
+        "tonalRamp": [
+          "#3A2613",
+          "#664321",
+          "#92612F",
+          "#BE7E3D",
+          "#CE9B67",
+          "#DCB894",
+          "#EBD5C0",
+          "#F9F2EC"
+        ]
       },
       "milk": {
         "role": "neutral",
         "displayName": "Milk",
         "canonical": "#FFF8F0",
-        "tonalRamp": ["#432F19", "#6C4D29", "#966B39", "#BC884D", "#CBA477", "#DBC0A1", "#FFDDB6", "#FFF8F0"]
+        "tonalRamp": [
+          "#432F19",
+          "#6C4D29",
+          "#966B39",
+          "#BC884D",
+          "#CBA477",
+          "#DBC0A1",
+          "#FFDDB6",
+          "#FFF8F0"
+        ]
       },
       "foam": {
         "role": "neutral",
         "displayName": "Foam",
         "canonical": "#FFFCF7",
-        "tonalRamp": ["#433319", "#6D5429", "#987439", "#BC934F", "#CCAD7A", "#DDC7A4", "#FFE6BC", "#FFFCF7"]
+        "tonalRamp": [
+          "#433319",
+          "#6D5429",
+          "#987439",
+          "#BC934F",
+          "#CCAD7A",
+          "#DDC7A4",
+          "#FFE6BC",
+          "#FFFCF7"
+        ]
       },
       "chalk": {
         "role": "neutral",
         "displayName": "Chalk",
         "canonical": "#FFF9EC",
-        "tonalRamp": ["#433619", "#6C5729", "#957839", "#BB984C", "#CBB075", "#DAC89F", "#FFE7B3", "#FFF9EC"]
+        "tonalRamp": [
+          "#433619",
+          "#6C5729",
+          "#957839",
+          "#BB984C",
+          "#CBB075",
+          "#DAC89F",
+          "#FFE7B3",
+          "#FFF9EC"
+        ]
       },
       "blush": {
         "role": "tertiary",
         "displayName": "Blush",
         "canonical": "#F5A3A0",
-        "tonalRamp": ["#470806", "#7D0E0A", "#B3140E", "#E91A13", "#F04C46", "#F4807C", "#F9B4B1", "#FDE8E7"]
+        "tonalRamp": [
+          "#470806",
+          "#7D0E0A",
+          "#B3140E",
+          "#E91A13",
+          "#F04C46",
+          "#F4807C",
+          "#F9B4B1",
+          "#FDE8E7"
+        ]
       },
       "page-wash-top": {
         "role": "neutral",
         "displayName": "Page Wash Top",
         "canonical": "#E8F0D8",
-        "tonalRamp": ["#354319", "#536828", "#718E36", "#8FB444", "#A6C567", "#BCD48C", "#D2E2B2", "#E8F0D8"]
+        "tonalRamp": [
+          "#354319",
+          "#536828",
+          "#718E36",
+          "#8FB444",
+          "#A6C567",
+          "#BCD48C",
+          "#D2E2B2",
+          "#E8F0D8"
+        ]
       },
       "page-wash-bottom": {
         "role": "neutral",
         "displayName": "Page Wash Bottom",
         "canonical": "#F3E6D4",
-        "tonalRamp": ["#433119", "#684D28", "#8E6936", "#B38544", "#C59D66", "#D3B58C", "#E8CEAB", "#F3E6D4"]
+        "tonalRamp": [
+          "#433119",
+          "#684D28",
+          "#8E6936",
+          "#B38544",
+          "#C59D66",
+          "#D3B58C",
+          "#E8CEAB",
+          "#F3E6D4"
+        ]
       }
     },
     "typographyMeta": {
-      "brand-mark": { "displayName": "Brand Mark", "purpose": "Hero Bobamama wordmark only." },
-      "display": { "displayName": "Display", "purpose": "Hero headline." },
-      "headline": { "displayName": "Headline", "purpose": "Section H2 titles." },
-      "title": { "displayName": "Title", "purpose": "H3 / cast names / step titles." },
-      "body": { "displayName": "Body", "purpose": "Marketing and UI paragraphs." },
-      "label": { "displayName": "Label", "purpose": "HUD, chips, compact controls." }
+      "brand-mark": {
+        "displayName": "Brand Mark",
+        "purpose": "Hero Bobamama wordmark only."
+      },
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section H2 titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "H3 / cast names / step titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Marketing and UI paragraphs."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "HUD, chips, compact controls."
+      }
     },
     "shadows": [
       {
@@ -137,7 +311,10 @@
       }
     ],
     "breakpoints": [
-      { "name": "mobile", "value": "720px" }
+      {
+        "name": "mobile",
+        "value": "720px"
+      }
     ]
   },
   "components": [
@@ -200,18 +377,18 @@
   ],
   "narrative": {
     "northStar": "Grandma's Pearl Stall",
-    "overview": "Bobamama looks like a cozy pearl milk tea shop you can walk into—warm wood, milk foam, leaf greens, and a little idle-game playfulness. Illustration and scene carry the brand; UI is chunky, rounded, and tactile so buttons feel like counter props, not SaaS chrome.\n\nThe system rejects coupon-board redeem metaphors, purple-gradient AI defaults, and dense dashboard layouts. Marketing surfaces lead with the Bobamama name at hero scale, one headline, one short support line, and a full-bleed shop image.",
+    "overview": "Bobamama looks like a cozy pearl milk tea shop you can walk into\u2014warm wood, milk foam, leaf greens, and a little idle-game playfulness. Illustration and scene carry the brand; UI is chunky, rounded, and tactile so buttons feel like counter props, not SaaS chrome.\n\nThe system rejects coupon-board redeem metaphors, purple-gradient AI defaults, and dense dashboard layouts. Marketing surfaces lead with the Bobamama name at hero scale, one headline, one short support line, and a full-bleed shop image.",
     "keyCharacteristics": [
       "Full-bleed illustrated shop as the primary visual plane",
       "Warm wood + milk tea neutrals with meadow leaf accents",
       "Chunky bordered pills with hard offset shadows (tactile game UI)",
       "Display face Fuzzy Bubbles; body Balsamiq Sans",
-      "Progress teased via cast unlocks / pearls—economy systems stay soft"
+      "Progress teased via cast unlocks / pearls\u2014economy systems stay soft"
     ],
     "rules": [
       {
         "name": "The Rarity Accent Rule",
-        "body": "Lemon CTA and blush stay sparse. Most of the screen is milk, wood, and leaf—action yellow earns attention by rarity.",
+        "body": "Lemon CTA and blush stay sparse. Most of the screen is milk, wood, and leaf\u2014action yellow earns attention by rarity.",
         "section": "colors"
       },
       {
@@ -235,7 +412,7 @@
       "Don't center a coupon/redeem wooden-board form as the product metaphor.",
       "Don't introduce purple-on-white AI gradients, glassmorphism stacks, or dashboard card grids as the page structure.",
       "Don't put pricing, MOE/dictionary headlines, or search-volume claims on the landing.",
-      "Don't treat temporary concept art as final brand assets—swap when real illustrations land."
+      "Don't treat temporary concept art as final brand assets\u2014swap when real illustrations land."
     ]
   }
 }
