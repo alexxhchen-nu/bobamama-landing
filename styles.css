@@ -208,6 +208,18 @@ img{max-width:100%;display:block}
 .foot .tiny{color:#F0E6DB;opacity:1;margin-top:8px}
 .foot p+p{margin-top:6px}
 
+/* 404 */
+.lost{
+  min-height:calc(100vh - var(--bar-h));
+  display:grid;align-items:center;
+  padding:48px 24px 72px;
+}
+.lost-in{max-width:560px;margin:0 auto}
+.lost-mark{color:var(--bark-deep);text-shadow:none;font-size:clamp(2rem,5vw,3.2rem)}
+.lost h1{font-size:clamp(1.85rem,4vw,2.8rem);margin-bottom:14px;max-width:14ch}
+.lost .lede{color:#4a342c;margin-bottom:22px}
+.lost .tiny{color:#4a342c;opacity:1}
+
 @media (max-width:720px){
   .links{display:none}
   .bar-in{gap:10px;padding:0 12px}
