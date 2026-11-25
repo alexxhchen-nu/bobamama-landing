@@ -207,6 +207,9 @@ img{max-width:100%;display:block}
 .foot-in{max-width:960px;margin:0 auto}
 .foot .tiny{color:#F0E6DB;opacity:1;margin-top:8px}
 .foot p+p{margin-top:6px}
+.foot-links{margin-top:14px;font-weight:700}
+.foot-links a{color:var(--chalk);text-underline-offset:3px}
+.foot-links a:hover{color:var(--cta)}
 
 /* 404 */
 .lost{
@@ -219,6 +222,27 @@ img{max-width:100%;display:block}
 .lost h1{font-size:clamp(1.85rem,4vw,2.8rem);margin-bottom:14px;max-width:14ch}
 .lost .lede{color:#4a342c;margin-bottom:22px}
 .lost .tiny{color:#4a342c;opacity:1}
+
+/* legal */
+.legal{padding:48px 24px 72px}
+.legal-in{max-width:680px;margin:0 auto}
+.legal-draft{
+  display:inline-block;margin:0 0 18px;padding:8px 12px;
+  background:var(--chalk);border:3px solid var(--bark);border-radius:16px;
+  font-weight:700;font-size:.9rem;color:var(--bark-deep);
+}
+.legal h1{font-size:clamp(1.85rem,4vw,2.6rem);margin-bottom:10px}
+.legal h2{font-size:1.25rem;margin:28px 0 10px}
+.legal p,.legal li{color:#4a342c;max-width:65ch}
+.legal ul{padding-left:1.2em;margin:0 0 8px}
+.legal li{margin:.4em 0}
+.legal-meta{font-size:.95rem;margin-bottom:8px}
+.legal-todo{
+  background:rgba(255,239,110,.55);border-bottom:2px solid var(--bark);
+  padding:0 4px;font-weight:700;
+}
+.legal a{color:var(--bark-deep);font-weight:700;text-underline-offset:3px}
+.legal-nav{margin-top:36px;font-weight:700}
 
 @media (max-width:720px){
   .links{display:none}
